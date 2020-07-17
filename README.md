@@ -8,7 +8,11 @@ $client = new Client();
 If you don't have an authentication token, [click here](https://studio.posit.us/minha-conta/api-tokens) to generate one.
 
 ````.NET
+Production
 Client client = new Client(@"you-api-token", false);
+
+Sandbox
+Client client = new Client(@"you-api-token", true);
 ````
 
 ## Sending Messages
