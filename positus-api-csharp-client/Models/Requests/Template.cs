@@ -38,6 +38,8 @@ namespace positus_api_csharp_client.Models.Requests
     {
         public string type { get; set; }
         public IList<Parameter> parameters { get; set; }
+        public string sub_type { get; set; }
+        public string index { get; set; }
     }
 
     public class TemplateDetails
