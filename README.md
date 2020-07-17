@@ -1,8 +1,10 @@
 ## Instantiating
-
 ````.NET
-$client = new Client();
+using positus_api_csharp_client;
+using positus_api_csharp_client.Models.Requests;
+using positus_api_csharp_client.Models.Responses;
 ````
+
 ## Authentication
 
 If you don't have an authentication token, [click here](https://studio.posit.us/minha-conta/api-tokens) to generate one.
