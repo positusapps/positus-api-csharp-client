@@ -19,8 +19,13 @@ namespace positus_api_csharp_client.Models.Requests
 
     public class ContactDetail
     {
+        public IList<object> addresses { get; set; }
+        public IList<object> emails { get; set; }
+        public IList<object> ims { get; set; }
         public Name name { get; set; }
+        public IList<object> org { get; set; }
         public IList<Phone> phones { get; set; }
+        public IList<object> urls { get; set; }
     }
 
     public class Contact

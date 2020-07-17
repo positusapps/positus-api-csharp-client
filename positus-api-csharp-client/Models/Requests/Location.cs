@@ -6,8 +6,8 @@ namespace positus_api_csharp_client.Models.Requests
 {
     public class LocationDetail
     {
-        public string longitude { get; set; }
-        public string latitude { get; set; }
+        public Double longitude { get; set; }
+        public Double latitude { get; set; }
         public string name { get; set; }
         public string address { get; set; }
     }
