@@ -236,3 +236,71 @@ If you prefer, we provide ready methods for each type of message.
                       ,
                 type = "template"
             });
+````
+
+### Template with button Quick Reply
+````.NET
+  List<Component> lstComponent = new List<Component>();
+            Component itemComponent;
+            Parameter parameter;
+
+            List<Parameter> lstParameterHeader = new List<Parameter>();
+
+            parameter = new Parameter();
+            parameter.type = "image";
+            parameter.image = new ImageLink() { link = "https://picsum.photos/200" };
+            lstParameterHeader.Add(parameter);
+
+            List<Parameter> lstParameterBody = new List<Parameter>();
+            
+            lstParameterBody.Add(new Parameter() { type = "text", text = "Joh" });
+            lstParameterBody.Add(new Parameter() { type = "text", text = "Mercedes-Benz" });
+            lstParameterBody.Add(new Parameter() { type = "text", text = "Actros" });
+            lstParameterBody.Add(new Parameter() { type = "text", text = "Cardiesel" });
+            lstParameterBody.Add(new Parameter() { type = "text", text = "08/05/2020" });
+
+            List<Parameter> lstParameterButton = new List<Parameter>();
+            List<Parameter> lstButton = new List<Parameter>();
+            lstParameterButton.Add(new Parameter() { type = "text", text = "zxTg23423" , parameters = lstButton });
+
+            itemComponent = new Component();
+            itemComponent.type = "body";
+            itemComponent.parameters = lstParameterBody;
+            lstComponent.Add(itemComponent);
+
+            itemComponent = new Component();
+            itemComponent.type = "header";
+            itemComponent.parameters = lstParameterHeader;
+            lstComponent.Add(itemComponent);
+
+            itemComponent = new Component();
+            itemComponent.type = "button";
+            itemComponent.sub_type = "url";
+            itemComponent.index = "0";
+            itemComponent.parameters = lstParameterButton;
+            lstComponent.Add(itemComponent);
+
+            @Message message = client.sendTemplate(new Template()
+            {
+
+                template = new TemplateDetails()
+                {
+                    name = "your_template_name"
+                ,
+                    @namespace = "your_namespace"
+                ,
+                    language = new Language()
+                    {
+                        code = "pt_BR"
+                ,
+                        policy = "deterministic"
+                    }
+                ,
+                    components = lstComponent
+                }
+                      ,
+                to = "+55999999999"
+                      ,
+                type = "template"
+            });
+````
