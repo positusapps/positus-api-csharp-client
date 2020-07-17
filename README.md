@@ -238,7 +238,7 @@ If you prefer, we provide ready methods for each type of message.
             });
 ````
 
-### Template with button Quick Reply
+### Template with button Call To Action - URL Dynamic
 ````.NET
   List<Component> lstComponent = new List<Component>();
             Component itemComponent;
