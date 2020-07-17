@@ -31,64 +31,113 @@ To check all the data that can be sent in each type of message, check the [Whats
 If you prefer, we provide ready methods for each type of message.
 
 ### Text
-
 ````.NET
-        @Message message = client.sendMessage(new Text()
-            {
-                text = new TextDetail() { body = "Olá Mundo" }
-                                  ,
-                to = "+5511941489395"
-                                  ,
-                type = "text"
-            });
+@Message message = client.sendMessage(new Text()
+    {
+        text = new TextDetail() { body = "Olá Mundo" }
+                          ,
+        to = "+999999999"
+                          ,
+        type = "text"
+    });
 ````
 
+
+### Location
+````.NET
+    @Message message = client.sendLocation(new Location()
+    {
+        location = new LocationDetail()
+        {
+            name = "Robbu brazil",
+            address = "Av. Angélica, 2530 - Bela Vista, São Paulo - SP, 01228-200",
+            longitude = -46.662787,
+            latitude = -23.553610
+        },
+        to = "+999999999",
+        type = "location"
+    });
+````
+
+### Image
+````.NET
+    @Message message = client.sendImage(new Image()
+    {
+        image = new ImageDetail()
+        {
+            link = "https://picsum.photos/200"
+        },
+         to = "+999999999",
+        type = "image"
+    });
+````
+
+### Document
+````.NET
+    @Message message = client.sendDocument(new Document()
+    {
+        document = new DocumentDetail()
+        {
+            filename = "original.zip",
+            caption = "Original",
+            link = "https://loremipsum.de/downloads/original.zip"
+
+        },
+        to = "+999999999",
+        type = "image"
+    });
+````
+
+### Video
+````.NET
+    @Message message = client.sendVideo(new Video()
+    {
+        video = new VideoDetail()
+        {
+            caption = "Original",
+            link = "http://techslides.com/demos/sample-videos/small.mp4"
+        },
+        to = "+999999999",
+        type = "video"
+    });
+````
+
+### Audio
+````.NET
+    @Message message = client.sendAudio(new Audio()
+    {
+        audio = new AudioDetail()
+        {
+            link = "https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
+        },
+        to = "+999999999",
+        type = "video"
+    });
+````
 
 
 ### Contact
 ````.NET
-            List<ContactDetail> contactDetails = new List<ContactDetail>();
-            
-            List<Phone> phones = new List<Phone>();
-            phones.Add(new Phone() { phone = "+55 11 2626-4234", type= "CELL", wa_id = "551126264234" });
+    List<ContactDetail> contactDetails = new List<ContactDetail>();
 
-            contactDetails.Add(new ContactDetail()
-            {
-                name = new Name() { first_name = "Positus Provider", formatted_name = "Positus Provider" },
-                phones = phones
-            });
+    List<Phone> phones = new List<Phone>();
+    phones.Add(new Phone() { phone = "+55 11 2626-4234", type= "CELL", wa_id = "551126264234" });
+
+    contactDetails.Add(new ContactDetail()
+    {
+        name = new Name() { first_name = "Positus Provider", formatted_name = "Positus Provider" },
+        phones = phones
+    });
 
 
-            @Message message = client.sendContacts(new Contact()
-            {
-                contacts = contactDetails,
-                to = "+999999999",
-                type = "contacts"
-            });
-
-````
-
-### Location
-````.NET
-            @Message message = client.sendLocation(new Location()
-            {
-                location = new LocationDetail()
-                {
-                    name = "Robbu brazil",
-                    address = "Av. Angélica, 2530 - Bela Vista, São Paulo - SP, 01228-200",
-                    longitude = -46.662787,
-                    latitude = -23.553610
-                },
-                to = "+999999999",
-                type = "location"
-            });
-````
-
-### Location
-````.NET
+    @Message message = client.sendContacts(new Contact()
+    {
+        contacts = contactDetails,
+        to = "+999999999",
+        type = "contacts"
+    });
 
 ````
-
 
 ### HSM
 
