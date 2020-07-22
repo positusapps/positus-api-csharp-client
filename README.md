@@ -304,3 +304,10 @@ If you prefer, we provide ready methods for each type of message.
                 type = "template"
             });
 ````
+
+
+### Documentation
+In case you have difficulties, we provide an [example video of integration.](https://www.youtube.com/watch?v=E8MZWwfQSZY&t=8s)
+[Documentation PT](http://docs.pt.posit.us/)
+[Documentation ES](http://docs.es.posit.us/)
+[Documentation EN](http://docs.en.posit.us/)
