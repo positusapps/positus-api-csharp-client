@@ -254,6 +254,19 @@ If you prefer, we provide ready methods for each type of message.
             });
 ````
 
+### Webhook
+````.NET
+    [HttpPost]
+    public ActionResult post([FromBody] Webhook obj)
+    {
+        foreach (var item in obj.messages)
+        {
+            var mensagem = item.text.body;
+        }
+        return Ok();
+    }
+````
+
 
 ### Documentation
 
