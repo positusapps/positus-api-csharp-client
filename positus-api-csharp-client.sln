@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "positus-api-csharp-client",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "positus-api-csharp-client-demo", "positus-api-csharp-client-demo\positus-api-csharp-client-demo.csproj", "{A219503F-4AA4-446F-99DE-8403F76CA57D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "positus-api-csharp-client-webhook", "positus-api-csharp-client-webhook\positus-api-csharp-client-webhook.csproj", "{DF8C3512-6775-4808-A882-CB9A4BA85C89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A219503F-4AA4-446F-99DE-8403F76CA57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A219503F-4AA4-446F-99DE-8403F76CA57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A219503F-4AA4-446F-99DE-8403F76CA57D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF8C3512-6775-4808-A882-CB9A4BA85C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF8C3512-6775-4808-A882-CB9A4BA85C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF8C3512-6775-4808-A882-CB9A4BA85C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF8C3512-6775-4808-A882-CB9A4BA85C89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
