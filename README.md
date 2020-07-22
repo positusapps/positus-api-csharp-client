@@ -11,10 +11,10 @@ If you don't have an authentication token, [click here](https://studio.posit.us/
 
 ````.NET
 Production
-Client client = new Client(@"you-api-token", false);
+Client client = new Client(@"your-api-token", false);
 
 Sandbox
-Client client = new Client(@"you-api-token", true);
+Client client = new Client(@"your-api-token", true);
 ````
 
 ## Sending Messages
