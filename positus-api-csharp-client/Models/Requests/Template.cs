@@ -15,6 +15,12 @@ namespace positus_api_csharp_client.Models.Requests
         public string link { get; set; }
     }
 
+    public class DocumentLink
+    {
+        public string link { get; set; }
+        public string filename { get; set; }
+    }
+
     public class DateTime
     {
         public string fallback_value { get; set; }
@@ -31,6 +37,7 @@ namespace positus_api_csharp_client.Models.Requests
         public string sub_type { get; set; }
         public string index { get; set; }
         public IList<Parameter> parameters { get; set; }
+        public DocumentLink document { get; set; }
 
     }
 
