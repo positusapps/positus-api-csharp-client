@@ -17,10 +17,15 @@ Integrate with WhatsApp Business API - Free Trial</Description>
     <PackageProjectUrl>http://studio.posit.us/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/positusapps/positus-api-csharp-client</RepositoryUrl>
     <PackageId>positus-api-csharp-client</PackageId>
-    <Version>1.0.5</Version>
+    <Version>1.0.7</Version>
     <AssemblyVersion>1.0.5.1</AssemblyVersion>
     <FileVersion>1.0.5.1</FileVersion>
+    <ApplicationIcon>linkedin-positus.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="linkedin-positus.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Include="LICENSE.md">
