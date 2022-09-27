@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -34,8 +35,14 @@ namespace positus_api_csharp_client.Models.Requests
         public string text { get; set; }
         public Currency currency { get; set; }
         public DateTime date_time { get; set; }
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string sub_type { get; set; }
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string index { get; set; }
+
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public IList<Parameter> parameters { get; set; }
         public DocumentLink document { get; set; }
 
@@ -51,6 +58,7 @@ namespace positus_api_csharp_client.Models.Requests
 
     public class TemplateDetails
     {
+        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
         public string @namespace { get; set; }
         public Language language { get; set; }
         public string name { get; set; }
